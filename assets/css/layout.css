@@ -1,0 +1,102 @@
+/* Main game container */
+.game-container {
+  width: min(90%, 80rem);
+  margin: var(--spacing-md) auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+/* Game board layout */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  flex: 1;
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Players container */
+.players-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
+  justify-content: space-around;
+  align-items: stretch;
+  position: relative;
+}
+
+/* Player section */
+.player {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal),
+    background-color var(--transition-normal);
+}
+
+.player--0 {
+  border: 3px solid var(--color-player1);
+}
+
+.player--1 {
+  border: 3px solid var(--color-player2);
+}
+
+.player__scores {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+/* Dice container */
+.dice-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: var(--z-dice);
+}
+
+/* Game controls */
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+  padding: var(--spacing-md);
+}
+
+/* Header and footer */
+.game-header,
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.game-footer {
+  margin-top: var(--spacing-md);
+  margin-bottom: 0;
+  background-color: rgba(240, 240, 240, 0.7);
+  border-radius: var(--radius-md);
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="A fun dice game where players compete to reach 100 points"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>Dice Roll Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <!-- Game Rules Modal -->
+      <div class="modal" id="rules-modal">
+        <div class="modal__content">
+          <button class="modal__close" aria-label="Close modal">&times;</button>
+          <h2 class="modal__title">Game Rules</h2>
+          <div class="modal__body">
+            <ul class="rules-list">
+              <li>
+                <strong>Rolling:</strong> Each player rolls the dice and
+                accumulates points. If a 1 is rolled, the player loses their
+                current score and their turn ends.
+              </li>
+              <li>
+                <strong>Holding:</strong> A player can choose to "hold" to add
+                their current score to their total. Then it's the next player's
+                turn.
+              </li>
+              <li>
+                <strong>Winning:</strong> The first player to reach 100 points
+                wins the game.
+              </li>
+              <li>
+                <strong>New Game:</strong> Reset scores and start over with
+                Player 1.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-overlay" id="modal-overlay"></div>
+
+      <!-- Header with Rules Button -->
+      <header class="game-header">
+        <h1 class="game-title">Dice Roll Game</h1>
+        <button class="btn btn--secondary btn--small" id="show-rules">
+          Show Rules
+        </button>
+      </header>
+
+      <!-- Main Game Board -->
+      <main class="game-board">
+        <div class="players-container">
+          <!-- Player 1 -->
+          <section class="player player--0 player--active">
+            <h2 class="player__name" id="name--0">Player 1</h2>
+            <div class="player__scores">
+              <div class="score-box">
+                <p class="score-box__label">Total Score</p>
+                <p class="score-box__value" id="score--0">0</p>
+              </div>
+              <div class="score-box score-box--current">
+                <p class="score-box__label">Current</p>
+                <p class="score-box__value" id="current--0">0</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Dice -->
+          <div class="dice-container">
+            <img
+              src="assets/images/dice-5.png"
+              alt="Dice"
+              class="dice hidden"
+              id="dice"
+            />
+          </div>
+
+          <!-- Player 2 -->
+          <section class="player player--1">
+            <h2 class="player__name" id="name--1">Player 2</h2>
+            <div class="player__scores">
+              <div class="score-box">
+                <p class="score-box__label">Total Score</p>
+                <p class="score-box__value" id="score--1">0</p>
+              </div>
+              <div class="score-box score-box--current">
+                <p class="score-box__label">Current</p>
+                <p class="score-box__value" id="current--1">0</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+          <button class="btn btn--primary" id="btn-new">
+            <span class="btn__icon">🔄</span>New Game
+          </button>
+          <button class="btn btn--primary" id="btn-roll">
+            <span class="btn__icon">🎲</span>Roll Dice
+          </button>
+          <button class="btn btn--primary" id="btn-hold">
+            <span class="btn__icon">📥</span>Hold
+          </button>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="game-footer">
+        <p>Creative Solutions By Omar</p>
+        <div class="footer-actions">
+          <a
+            href="mailto:contact.alzubi@gmail.com"
+            class="btn btn--small btn--secondary"
+          >
+            Contact Me
+          </a>
+          <img
+            class="footer-logo"
+            src="assets/images/logo.jpg"
+            alt="Developer logo"
+            width="40"
+            height="40"
+          />
+        </div>
+        <p class="copyright" id="copyright">© 2025</p>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" type="module"></script>
+  </body>
+</html>

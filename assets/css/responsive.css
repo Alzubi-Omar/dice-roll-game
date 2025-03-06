@@ -1,0 +1,110 @@
+/* Extra small devices (phones) */
+@media (max-width: 576px) {
+  :root {
+    /* Slightly smaller font sizes for mobile */
+    --text-3xl: 2.5rem;
+    --text-2xl: 1.75rem;
+  }
+
+  .game-board {
+    padding: var(--spacing-md);
+  }
+
+  .players-container {
+    flex-direction: column;
+  }
+
+  .player {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+  }
+
+  .player__name {
+    width: 100%;
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .player__scores {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .score-box {
+    flex: 1;
+    margin: 0 var(--spacing-xs);
+  }
+
+  .score-box__value {
+    font-size: var(--text-xl);
+  }
+
+  .dice-container {
+    position: relative;
+    margin: var(--spacing-md) auto;
+    top: auto;
+    left: auto;
+    transform: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dice {
+    height: 100px !important;
+  }
+
+  .game-controls {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .game-footer {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: center;
+  }
+}
+
+/* Small devices (landscape phones) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .players-container {
+    flex-direction: column;
+  }
+
+  .dice {
+    height: 80px;
+  }
+
+  .game-controls {
+    flex-wrap: wrap;
+  }
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 992px) {
+  .players-container {
+    flex-wrap: wrap;
+  }
+
+  .player {
+    flex: 1 1 45%;
+  }
+}
+
+/* Large devices (desktops) */
+@media (min-width: 992px) {
+  .players-container {
+    flex-wrap: nowrap;
+  }
+
+  .dice-container {
+    position: absolute;
+  }
+}
