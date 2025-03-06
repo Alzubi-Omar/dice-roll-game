@@ -6,7 +6,7 @@ Welcome to the Dice Game! This is a fun, interactive two-player game where playe
 
 🚀 Live Demo
 
-Play the Game ()
+Play the Game [https://alzubi-omar.github.io/dice-roll-game/]
 
 ---
 
